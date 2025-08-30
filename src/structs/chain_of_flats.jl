@@ -154,7 +154,7 @@ end
 Return the colength of the chain of flats `C`, i.e., the rank of its matroid minus its length.
 """
 function colength(C::ChainOfFlats)
-    return length(C) - rank(matroid(C)) + 1
+    return rank(matroid(C)) - length(C) - 1
 end
 
 @doc raw"""
