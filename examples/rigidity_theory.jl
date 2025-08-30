@@ -51,8 +51,8 @@ AbstractAlgebra.set_verbosity_level(:TropicalHomotopyContinuation, 1)
 #
 #################################################################################
 
-@time begin
-    toIntersect = tropical_hypersurface.(F)
-    toIntersect = vcat(toIntersect, [tropical_linear_space(linearMatrix)])
-    reduce(stable_intersection,toIntersect)
-end
+# @time begin
+#     toIntersect = tropical_hypersurface.(F)
+#     toIntersect = vcat(toIntersect, [tropical_linear_space(linearMatrix)])
+#     reduce(stable_intersection,toIntersect)
+# end
