@@ -14,6 +14,12 @@ struct ChainOfFlats
     flats::Vector{Flat}
 end
 
+function Base.hash(c::ChainOfFlats, h::UInt)
+    # Combine hashes of matroid and flats
+    h = hash(c.matroid, h)  # hash the matroid
+    h = hash(c.flats, h)    # hash the vector of Flats
+    return h
+end
 
 
 ###############################################################################
